@@ -9,13 +9,13 @@ AppBar MyAppBar() {
         color: Colors.black,
         size: 25,
       ),
-      SizedBox(width: 20),
+      SizedBox(width: 15),
       Icon(
         Icons.shopping_cart_sharp,
         color: Colors.black,
         size: 25,
       ),
-      SizedBox(width: 20),
+      SizedBox(width: 10),
     ],
     title: Text(
       'Shoes',
