@@ -5,7 +5,7 @@ TextStyle DrawerStyle() {
 }
 
 TextStyle outhersStyle() {
-  return TextStyle(fontSize: 17);
+  return TextStyle(fontSize: 18);
 }
 
 TextStyle allStyle() {

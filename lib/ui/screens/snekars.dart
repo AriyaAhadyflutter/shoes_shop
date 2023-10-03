@@ -1,22 +1,23 @@
 import 'package:day15_shoes/Animation/FadeAnimation.dart';
 import 'package:day15_shoes/ui/screens/air.dart';
 import 'package:day15_shoes/ui/screens/footBall.dart';
+import 'package:day15_shoes/ui/screens/home.dart';
 import 'package:day15_shoes/ui/screens/running.dart';
-import 'package:day15_shoes/ui/screens/snekars.dart';
 import 'package:day15_shoes/ui/widget/categoryButton.dart';
 import 'package:day15_shoes/ui/widget/myDrawer.dart';
 import 'package:day15_shoes/ui/widget/myTextStyle.dart';
 import 'package:day15_shoes/ui/widget/myappbar.dart';
 import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class Sneakars extends StatefulWidget {
+  const Sneakars({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Sneakars> createState() => _SneakarsState();
 }
 
-class _HomeState extends State<Home> {
+class _SneakarsState extends State<Sneakars> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,38 +31,38 @@ class _HomeState extends State<Home> {
           child: Row(
             children: [
               SizedBox(width: 10),
+              MyTextButton(
+                myCategory: 'All',
+                myTS: allStyle(),
+                myPadding: 10,
+                myOnTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Home();
+                    },
+                  ),
+                ),
+              ),
               FadeAnimation(
                 1.1,
                 Container(
                   margin: EdgeInsets.only(right: 15),
                   padding: EdgeInsets.only(
-                    left: 20,
-                    right: 10,
+                    left: 10,
+                    right: 5,
                     top: 6,
                     bottom: 6,
                   ),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(15),
                     color: Colors.grey[200],
                   ),
                   child: MyTextButton(
-                    myCategory: 'All',
-                    myTS: allStyle(),
+                    myCategory: 'Sneakers',
+                    myTS: outhersStyle(),
                     myPadding: 10,
                     myOnTap: () {},
-                  ),
-                ),
-              ),
-              MyTextButton(
-                myCategory: 'Sneakers',
-                myTS: outhersStyle(),
-                myPadding: 13,
-                myOnTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return Sneakars();
-                    },
                   ),
                 ),
               ),

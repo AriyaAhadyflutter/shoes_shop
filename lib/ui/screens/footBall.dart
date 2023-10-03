@@ -1,6 +1,6 @@
 import 'package:day15_shoes/Animation/FadeAnimation.dart';
 import 'package:day15_shoes/ui/screens/air.dart';
-import 'package:day15_shoes/ui/screens/footBall.dart';
+import 'package:day15_shoes/ui/screens/home.dart';
 import 'package:day15_shoes/ui/screens/running.dart';
 import 'package:day15_shoes/ui/screens/snekars.dart';
 import 'package:day15_shoes/ui/widget/categoryButton.dart';
@@ -9,14 +9,14 @@ import 'package:day15_shoes/ui/widget/myTextStyle.dart';
 import 'package:day15_shoes/ui/widget/myappbar.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class Football extends StatefulWidget {
+  const Football({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Football> createState() => _FootballState();
 }
 
-class _HomeState extends State<Home> {
+class _FootballState extends State<Football> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,27 +30,19 @@ class _HomeState extends State<Home> {
           child: Row(
             children: [
               SizedBox(width: 10),
-              FadeAnimation(
-                1.1,
-                Container(
-                  margin: EdgeInsets.only(right: 15),
-                  padding: EdgeInsets.only(
-                    left: 20,
-                    right: 10,
-                    top: 6,
-                    bottom: 6,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.grey[200],
-                  ),
-                  child: MyTextButton(
+            MyTextButton(
                     myCategory: 'All',
                     myTS: allStyle(),
                     myPadding: 10,
-                    myOnTap: () {},
+       myOnTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Home();
+                    },
                   ),
                 ),
+               
               ),
               MyTextButton(
                 myCategory: 'Sneakers',
@@ -65,16 +57,25 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              MyTextButton(
-                myCategory: 'Football',
-                myTS: outhersStyle(),
-                myPadding: 13,
-                myOnTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return Football();
-                    },
+               FadeAnimation(
+                1.1,
+                Container(
+                  margin: EdgeInsets.only(right: 15),
+                  padding: EdgeInsets.only(
+                    left: 20,
+                    right: 10,
+                    top: 6,
+                    bottom: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.grey[200],
+                  ),
+                  child: MyTextButton(
+                    myCategory: 'Football',
+                    myTS: outhersStyle(),
+                    myPadding: 10,
+                    myOnTap: () {},
                   ),
                 ),
               ),
@@ -111,3 +112,4 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
