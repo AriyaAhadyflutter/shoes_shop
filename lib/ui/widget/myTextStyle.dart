@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 TextStyle DrawerStyle() {
-  return TextStyle(fontSize: 18);
+  return TextStyle(fontSize: 17);
 }
 
 TextStyle outhersStyle() {
-  return TextStyle(fontSize: 18);
+  return TextStyle(fontSize: 16);
 }
 
 TextStyle allStyle() {

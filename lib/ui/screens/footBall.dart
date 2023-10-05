@@ -7,6 +7,7 @@ import 'package:day15_shoes/ui/widget/categoryButton.dart';
 import 'package:day15_shoes/ui/widget/myDrawer.dart';
 import 'package:day15_shoes/ui/widget/myTextStyle.dart';
 import 'package:day15_shoes/ui/widget/myappbar.dart';
+import 'package:day15_shoes/ui/widget/shoeCard.dart';
 import 'package:flutter/material.dart';
 
 class Football extends StatefulWidget {
@@ -23,93 +24,105 @@ class _FootballState extends State<Football> {
       backgroundColor: Colors.white,
       appBar: MyAppBar(),
       drawer: MyDrawer(),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 10, right: 60, left: 20),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-              SizedBox(width: 10),
-            MyTextButton(
-                    myCategory: 'All',
-                    myTS: allStyle(),
-                    myPadding: 10,
-       myOnTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return Home();
-                    },
-                  ),
+      body: SingleChildScrollView(
+           physics: BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 10, right: 60, left: 20),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    SizedBox(width: 20),
+                    MyTextButton(
+                      myCategory: 'All',
+                      myTS: allStyle(),
+                      myPadding: 13,
+                      myOnTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Home();
+                          },
+                        ),
+                      ),
+                    ),
+                    MyTextButton(
+                      myCategory: 'Sneakers',
+                      myTS: outhersStyle(),
+                      myPadding: 13,
+                      myOnTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Sneakars();
+                          },
+                        ),
+                      ),
+                    ),
+                    FadeAnimation(
+                      1.1,
+                      Container(
+                        margin: EdgeInsets.only(right: 15),
+                        padding: EdgeInsets.only(
+                          left: 12,
+                          right: 7,
+                          top: 6,
+                          bottom: 6,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.grey[200],
+                        ),
+                        child: MyTextButton(
+                          myCategory: 'Football',
+                          myTS: outhersStyle(),
+                          myPadding: 10,
+                          myOnTap: () {},
+                        ),
+                      ),
+                    ),
+                    MyTextButton(
+                      myCategory: 'Runnig',
+                      myTS: outhersStyle(),
+                      myPadding: 13,
+                      myOnTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Running();
+                          },
+                        ),
+                      ),
+                    ),
+                    MyTextButton(
+                      myCategory: 'Air',
+                      myTS: outhersStyle(),
+                      myPadding: 13,
+                      myOnTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Air();
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-               
               ),
-              MyTextButton(
-                myCategory: 'Sneakers',
-                myTS: outhersStyle(),
-                myPadding: 13,
-                myOnTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return Sneakars();
-                    },
-                  ),
-                ),
-              ),
-               FadeAnimation(
-                1.1,
-                Container(
-                  margin: EdgeInsets.only(right: 15),
-                  padding: EdgeInsets.only(
-                    left: 20,
-                    right: 10,
-                    top: 6,
-                    bottom: 6,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.grey[200],
-                  ),
-                  child: MyTextButton(
-                    myCategory: 'Football',
-                    myTS: outhersStyle(),
-                    myPadding: 10,
-                    myOnTap: () {},
-                  ),
-                ),
-              ),
-              MyTextButton(
-                myCategory: 'Runnig',
-                myTS: outhersStyle(),
-                myPadding: 13,
-                myOnTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return Running();
-                    },
-                  ),
-                ),
-              ),
-              MyTextButton(
-                myCategory: 'Air',
-                myTS: outhersStyle(),
-                myPadding: 13,
-                myOnTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return Air();
-                    },
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+                SizedBox(height: 10),
+            ShoesCards(
+              imageUrl: 'assets/images/football1.jpg',
+              myTimeAnimation: 1.1,
+              myCategoryName: 'Football',
+              myPrice: '200',
+            ),
+          ],
         ),
       ),
     );
   }
 }
-
