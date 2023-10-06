@@ -1,5 +1,10 @@
 import 'package:day15_shoes/Animation/FadeAnimation.dart';
+import 'package:day15_shoes/ui/widget/myTextStyle.dart';
 import 'package:flutter/material.dart';
+
+
+String dollor = r'$';
+
 
 class ShoesCards extends StatefulWidget {
   final String imageUrl;
@@ -47,13 +52,10 @@ class _ShoesCardsState extends State<ShoesCards> {
                         bottom: 20,
                         left: 15,
                         child: FadeAnimation(
-                          1.1,
+                          widget.myTimeAnimation,
                           Text(
                             '${widget.myPrice}$dollor',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
+                            style: priceStyle(),
                           ),
                         ),
                       ),
@@ -61,13 +63,10 @@ class _ShoesCardsState extends State<ShoesCards> {
                         top: 55,
                         left: 20,
                         child: FadeAnimation(
-                          1.1,
+                          widget.myTimeAnimation,
                           Text(
                             widget.myCategoryName,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                            ),
+                            style: categoryStyle(),
                           ),
                         ),
                       ),
@@ -75,14 +74,10 @@ class _ShoesCardsState extends State<ShoesCards> {
                         top: 20,
                         left: 20,
                         child: FadeAnimation(
-                          1.1,
+                          widget.myTimeAnimation,
                           Text(
                             'Nike',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 26,
-                              fontWeight: FontWeight.bold,
-                            ),
+                            style: nikeStyle(),
                           ),
                         ),
                       ),
@@ -90,7 +85,7 @@ class _ShoesCardsState extends State<ShoesCards> {
                         top: 20,
                         right: 20,
                         child: FadeAnimation(
-                          1.1,
+                          widget.myTimeAnimation,
                           Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(100),
@@ -113,5 +108,3 @@ class _ShoesCardsState extends State<ShoesCards> {
     );
   }
 }
-
-String dollor = r'$';

@@ -117,20 +117,29 @@ class _HomeState extends State<Home> {
             SizedBox(height: 20),
             ShoesCards(
               imageUrl: 'assets/images/one.jpg',
-              myTimeAnimation: 1.1,
+              myTimeAnimation: 2,
               myCategoryName: 'Run',
               myPrice: '60',
               myontap: () => Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
-                  return ShoseDitale();
+                  return ShoseDitale(
+                    imageUrl: 'assets/images/one.jpg',
+                  );
                 },
               )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/two.jpg',
-              myTimeAnimation: 1.1,
+              myTimeAnimation: 1,
               myCategoryName: 'Sneakers',
               myPrice: '100',
+              myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl: 'assets/images/two.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/three.jpg',
