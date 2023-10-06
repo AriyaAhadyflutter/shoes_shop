@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
       appBar: MyAppBar(),
       drawer: MyDrawer(),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+    
         child: Column(
           children: [
             Padding(
@@ -143,69 +143,146 @@ class _HomeState extends State<Home> {
             ),
             ShoesCards(
               imageUrl: 'assets/images/three.jpg',
-              myTimeAnimation: 1.1,
+              myTimeAnimation: 1,
               myCategoryName: 'Sneakers',
               myPrice: '100',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/three.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/six.jpg',
-              myTimeAnimation: 1.2,
+              myTimeAnimation: 1,
               myCategoryName: 'Run',
               myPrice: '60',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/six.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/seven.jpg',
-              myTimeAnimation: 1.3,
+              myTimeAnimation: 1,
               myCategoryName: 'Sneakers',
               myPrice: '100',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/seven.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/eight.jpg',
-              myTimeAnimation: 1.4,
+              myTimeAnimation: 1,
               myCategoryName: 'Jordon',
               myPrice: '130',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (conext) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/eight.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/nine.jpg',
-              myTimeAnimation: 1.5,
+              myTimeAnimation: 1,
               myCategoryName: 'Jordon',
               myPrice: '130',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/nine.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/ten.jpg',
-              myTimeAnimation: 1.6,
+              myTimeAnimation: 1,
               myCategoryName: 'Sneakers',
               myPrice: '100',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/ten.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/eleven.jpg',
-              myTimeAnimation: 1.7,
+              myTimeAnimation: 1,
               myCategoryName: 'Air',
               myPrice: '160',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/eleven.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/AirJordan.jpg',
-              myTimeAnimation: 1.8,
+              myTimeAnimation: 1,
               myCategoryName: 'Jordon',
               myPrice: '130',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/AirJordan.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/Airjordan2.jpg',
-              myTimeAnimation: 1.9,
+              myTimeAnimation: 1,
               myCategoryName: 'Jordon',
               myPrice: '130',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/Airjordan2.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/football1.jpg',
-              myTimeAnimation: 1.9,
+              myTimeAnimation: 1,
               myCategoryName: 'Football',
               myPrice: '200',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/football1.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/running2.jpg',
-              myTimeAnimation: 1.9,
+              myTimeAnimation: 1,
               myCategoryName: 'Run',
               myPrice: '60',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/running2.jpg',
+                  );
+                },
+              )),
             ),
           ],
         ),

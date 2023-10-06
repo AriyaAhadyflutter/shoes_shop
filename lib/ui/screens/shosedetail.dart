@@ -1,3 +1,4 @@
+import 'package:day15_shoes/Animation/FadeAnimation.dart';
 import 'package:day15_shoes/ui/widget/mcb.dart';
 import 'package:day15_shoes/ui/widget/myTextStyle.dart';
 import 'package:flutter/material.dart';
@@ -49,15 +50,18 @@ class _ShoseDitaleState extends State<ShoseDitale> {
           Positioned(
             right: 20,
             top: 50,
-            child: Container(
-              width: 35,
-              height: 35,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                color: Colors.white,
-              ),
-              child: Center(
-                child: Icon(Icons.favorite_border, size: 20),
+            child: FadeAnimation(
+              1.1,
+              Container(
+                width: 35,
+                height: 35,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  color: Colors.white,
+                ),
+                child: Center(
+                  child: Icon(Icons.favorite_border, size: 20),
+                ),
               ),
             ),
           ),
@@ -92,77 +96,86 @@ class _ShoseDitaleState extends State<ShoseDitale> {
           Positioned(
             bottom: 250,
             left: 20,
-            child: Text(
-              'Nike',
-              style: bigNikeStyle(),
+            child: FadeAnimation(
+              1.1,
+              Text(
+                'Nike',
+                style: bigNikeStyle(),
+              ),
             ),
           ),
           //size text
           Positioned(
             bottom: 200,
             left: 20,
-            child: Text(
-              'Size',
-              style: sizeStyle(),
+            child: FadeAnimation(
+              1.1,
+              Text(
+                'Size',
+                style: sizeStyle(),
+              ),
             ),
           ),
           Positioned(
             bottom: 135,
             left: 30,
-            child: Row(
-              children: [
-                SizeButtons(
-                  mynum: '38',
-                  myOnTap: () {
-                    setState(() {
-                      onClick1 = !onClick1;
-                      onClick2 = false;
-                      onClick3 = false;
-                      onClick4 = false;
-                    });
-                  },
-                  myBool: onClick1,
-                ),
-                SizedBox(width: 20),
-                SizeButtons(
-                  mynum: '40',
-                  myOnTap: () {
-                    setState(() {
-                      onClick1 = false;
-                      onClick2 = !onClick2;
-                      onClick3 = false;
-                      onClick4 = false;
-                    });
-                  },
-                  myBool: onClick2,
-                ),
-                SizedBox(width: 20),
-                SizeButtons(
-                  mynum: '42',
-                  myOnTap: () {
-                    setState(() {
-                      onClick1 = false;
-                      onClick2 = false;
-                      onClick3 = !onClick3;
-                      onClick4 = false;
-                    });
-                  },
-                  myBool: onClick3,
-                ),
-                SizedBox(width: 20),
-                SizeButtons(
-                  mynum: '44',
-                  myOnTap: () {
-                    setState(() {
-                      onClick1 = false;
-                      onClick2 = false;
-                      onClick3 = false;
-                      onClick4 = !onClick4;
-                    });
-                  },
-                  myBool: onClick4,
-                ),
-              ],
+            child: FadeAnimation(
+              1.1,
+              Row(
+                children: [
+                  SizeButtons(
+                    mynum: '38',
+                    myOnTap: () {
+                      setState(() {
+                        onClick1 = !onClick1;
+                        onClick2 = false;
+                        onClick3 = false;
+                        onClick4 = false;
+                      });
+                    },
+                    myBool: onClick1,
+                  ),
+                  SizedBox(width: 20),
+                  SizeButtons(
+                    mynum: '40',
+                    myOnTap: () {
+                      setState(() {
+                        onClick1 = false;
+                        onClick2 = !onClick2;
+                        onClick3 = false;
+                        onClick4 = false;
+                      });
+                    },
+                    myBool: onClick2,
+                  ),
+                  SizedBox(width: 20),
+                  SizeButtons(
+                    mynum: '42',
+                    myOnTap: () {
+                      setState(() {
+                        onClick1 = false;
+                        onClick2 = false;
+                        onClick3 = !onClick3;
+                        onClick4 = false;
+                      });
+                    },
+                    myBool: onClick3,
+                  ),
+                  SizedBox(width: 20),
+                  SizeButtons(
+                    mynum: '44',
+                    myOnTap: () {
+                      setState(() {
+                        onClick1 = false;
+                        onClick2 = false;
+                        onClick3 = false;
+                        onClick4 = !onClick4;
+                      });
+                    },
+                    myBool: onClick4,
+                  ),
+                ],
+              ),
             ),
           ),
         ],

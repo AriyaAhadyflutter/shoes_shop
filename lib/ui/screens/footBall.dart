@@ -2,6 +2,7 @@ import 'package:day15_shoes/Animation/FadeAnimation.dart';
 import 'package:day15_shoes/ui/screens/air.dart';
 import 'package:day15_shoes/ui/screens/home.dart';
 import 'package:day15_shoes/ui/screens/running.dart';
+import 'package:day15_shoes/ui/screens/shosedetail.dart';
 import 'package:day15_shoes/ui/screens/snekars.dart';
 import 'package:day15_shoes/ui/widget/categoryButton.dart';
 import 'package:day15_shoes/ui/widget/myDrawer.dart';
@@ -25,7 +26,7 @@ class _FootballState extends State<Football> {
       appBar: MyAppBar(),
       drawer: MyDrawer(),
       body: SingleChildScrollView(
-           physics: BouncingScrollPhysics(),
+     
         child: Column(
           children: [
             Padding(
@@ -119,6 +120,13 @@ class _FootballState extends State<Football> {
               myTimeAnimation: 1.1,
               myCategoryName: 'Football',
               myPrice: '200',
+                               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/football1.jpg',
+                  );
+                },
+              )),
             ),
           ],
         ),

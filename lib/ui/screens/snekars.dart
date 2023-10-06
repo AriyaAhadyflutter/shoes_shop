@@ -3,6 +3,7 @@ import 'package:day15_shoes/ui/screens/air.dart';
 import 'package:day15_shoes/ui/screens/footBall.dart';
 import 'package:day15_shoes/ui/screens/home.dart';
 import 'package:day15_shoes/ui/screens/running.dart';
+import 'package:day15_shoes/ui/screens/shosedetail.dart';
 import 'package:day15_shoes/ui/widget/categoryButton.dart';
 import 'package:day15_shoes/ui/widget/myDrawer.dart';
 import 'package:day15_shoes/ui/widget/myTextStyle.dart';
@@ -26,7 +27,7 @@ class _SneakarsState extends State<Sneakars> {
       appBar: MyAppBar(),
       drawer: MyDrawer(),
       body: SingleChildScrollView(
-           physics: BouncingScrollPhysics(),
+
         child: Column(
           children: [
             Padding(
@@ -120,24 +121,52 @@ class _SneakarsState extends State<Sneakars> {
               myTimeAnimation: 1.1,
               myCategoryName: 'Sneakers',
               myPrice: '100',
+                 myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/two.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/three.jpg',
               myTimeAnimation: 1.2,
               myCategoryName: 'Sneakers',
               myPrice: '100',
+                 myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/three.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/seven.jpg',
               myTimeAnimation: 1.3,
               myCategoryName: 'Sneakers',
               myPrice: '100',
+                 myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/seven.jpg',
+                  );
+                },
+              )),
             ),
             ShoesCards(
               imageUrl: 'assets/images/ten.jpg',
               myTimeAnimation: 1.4,
               myCategoryName: 'Sneakers',
               myPrice: '100',
+                 myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/AirJordan.jpg',
+                  );
+                },
+              )),
             ),
           ],
         ),

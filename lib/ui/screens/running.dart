@@ -2,6 +2,7 @@ import 'package:day15_shoes/Animation/FadeAnimation.dart';
 import 'package:day15_shoes/ui/screens/air.dart';
 import 'package:day15_shoes/ui/screens/footBall.dart';
 import 'package:day15_shoes/ui/screens/home.dart';
+import 'package:day15_shoes/ui/screens/shosedetail.dart';
 // import 'package:day15_shoes/ui/screens/home.dart';
 import 'package:day15_shoes/ui/screens/snekars.dart';
 import 'package:day15_shoes/ui/widget/categoryButton.dart';
@@ -26,7 +27,7 @@ class _RunningState extends State<Running> {
       appBar: MyAppBar(),
       drawer: MyDrawer(),
       body: SingleChildScrollView(
-           physics: BouncingScrollPhysics(),
+           
         child: Column(
           children: [
             Padding(
@@ -120,18 +121,39 @@ class _RunningState extends State<Running> {
               myTimeAnimation: 1.1,
               myCategoryName: 'Run',
               myPrice: '60',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/one.jpg',
+                  );
+                },
+              )),
             ),
                ShoesCards(
               imageUrl: 'assets/images/six.jpg',
               myTimeAnimation: 1.2,
               myCategoryName: 'Run',
               myPrice: '60',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/six.jpg',
+                  );
+                },
+              )),
             ),
                 ShoesCards(
               imageUrl: 'assets/images/running2.jpg',
               myTimeAnimation: 1.3,
               myCategoryName: 'Run',
               myPrice: '60',
+               myontap: () => Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ShoseDitale(
+                    imageUrl:  'assets/images/running2.jpg',
+                  );
+                },
+              )),
             ),
           ],
         ),
