@@ -27,7 +27,6 @@ class _SneakarsState extends State<Sneakars> {
       appBar: MyAppBar(),
       drawer: MyDrawer(),
       body: SingleChildScrollView(
-
         child: Column(
           children: [
             Padding(
@@ -121,10 +120,10 @@ class _SneakarsState extends State<Sneakars> {
               myTimeAnimation: 1.1,
               myCategoryName: 'Sneakers',
               myPrice: '100',
-                 myontap: () => Navigator.push(context, MaterialPageRoute(
+              myontap: () => Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
                   return ShoseDitale(
-                    imageUrl:  'assets/images/two.jpg',
+                    imageUrl: 'assets/images/two.jpg',
                   );
                 },
               )),
@@ -134,10 +133,10 @@ class _SneakarsState extends State<Sneakars> {
               myTimeAnimation: 1.2,
               myCategoryName: 'Sneakers',
               myPrice: '100',
-                 myontap: () => Navigator.push(context, MaterialPageRoute(
+              myontap: () => Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
                   return ShoseDitale(
-                    imageUrl:  'assets/images/three.jpg',
+                    imageUrl: 'assets/images/three.jpg',
                   );
                 },
               )),
@@ -147,10 +146,10 @@ class _SneakarsState extends State<Sneakars> {
               myTimeAnimation: 1.3,
               myCategoryName: 'Sneakers',
               myPrice: '100',
-                 myontap: () => Navigator.push(context, MaterialPageRoute(
+              myontap: () => Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
                   return ShoseDitale(
-                    imageUrl:  'assets/images/seven.jpg',
+                    imageUrl: 'assets/images/seven.jpg',
                   );
                 },
               )),
@@ -160,10 +159,10 @@ class _SneakarsState extends State<Sneakars> {
               myTimeAnimation: 1.4,
               myCategoryName: 'Sneakers',
               myPrice: '100',
-                 myontap: () => Navigator.push(context, MaterialPageRoute(
+              myontap: () => Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
                   return ShoseDitale(
-                    imageUrl:  'assets/images/AirJordan.jpg',
+                    imageUrl: 'assets/images/ten.jpg',
                   );
                 },
               )),
