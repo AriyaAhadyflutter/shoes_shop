@@ -23,9 +23,9 @@ class MyTextButton extends StatefulWidget {
 class _MyTextButtonState extends State<MyTextButton> {
   @override
   Widget build(BuildContext context) {
-    return FadeAnimation(
-      1.1,
-      Padding(
+    return
+      
+       Padding(
         padding: EdgeInsets.only(right: widget.myPadding),
         child: GestureDetector(
           onTap: widget.myOnTap,
@@ -34,7 +34,6 @@ class _MyTextButtonState extends State<MyTextButton> {
             style: widget.myTS,
           ),
         ),
-      ),
-    );
+      );
   }
 }
